@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        android:layout_height="wrap_content" xmlns:card_view="http://schemas.android.com/tools"
+        card_view:cardElevation="6dp"
+        app:cardBackgroundColor="@color/grayCard">
+
+    <LinearLayout
+            android:id="@+id/item_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_background"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin"
+            android:layout_marginTop="@dimen/card_margin"
+            android:orientation="vertical">
+
+        <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="@dimen/grid_item_image_size"
+                android:layout_marginTop="20dp"
+                android:layout_height="@dimen/grid_item_image_size"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"/>
+
+        <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Nombre"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/grid_item_text_size"/>
+
+        <TextView
+                android:id="@+id/item_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Terror, Misterio"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="@dimen/grid_item_text_size"/>
+
+        <TextView
+                android:id="@+id/item_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="2018"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/grid_item_text_size"/>
+
+        <RatingBar
+                android:id="@+id/item_rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"
+                android:isIndicator="true"
+                android:paddingTop="8dp"
+                android:progressTint="#FDDB39"
+                android:rating="4"
+                android:secondaryProgressTint="#FDDB39"/>
+
+        <Button
+                android:id="@+id/button1"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:padding="2dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:background="@drawable/button_xml"
+                android:text="+ AGREGAR"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
