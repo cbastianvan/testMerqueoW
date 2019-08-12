@@ -32,12 +32,15 @@ class MovieOb() : Parcelable {
     @Expose
     private var genreIds: List<Int>? = null
 
+    private var cant: Int = 0
+
     constructor(parcel: Parcel) : this() {
         id = parcel.readInt()
         title = parcel.readString()
         posterPath = parcel.readString()
         releaseDate = parcel.readString()
         rating = parcel.readFloat()
+        cant = parcel.readInt()
     }
 
     fun getId(): Int {
@@ -46,6 +49,14 @@ class MovieOb() : Parcelable {
 
     fun setId(id: Int) {
         this.id = id
+    }
+
+    fun getCant(): Int {
+        return cant
+    }
+
+    fun setCant(cant: Int) {
+        this.cant = cant
     }
 
     fun getTitle(): String? {
