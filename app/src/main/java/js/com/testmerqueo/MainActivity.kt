@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     var moviesRepository: MoviesRepository = MoviesRepository.getInstance()
     lateinit var moviesListArray: List<MovieOb>
     val cartList = ArrayList<MovieOb>()
+    lateinit var custom_dg: AwesomeCustomDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,8 +98,9 @@ class MainActivity : AppCompatActivity() {
         var urlPath = moviesListArray[position].getPosterPath()
         var rating = moviesListArray[position].getRating()
 
-        AwesomeCustomDialog(this)
-            .setView(R.layout.detail_movie)
+        custom_dg = AwesomeCustomDialog(this);
+
+            custom_dg.setView(R.layout.detail_movie)
             .configureView(object: AwesomeCustomDialog.ViewConfigurator{
                 override fun configureView(v: View) {
 
@@ -118,7 +121,8 @@ class MainActivity : AppCompatActivity() {
 
                     buttonClose.setOnClickListener {
 
-                    //    AwesomeToast.success(this@Dashboard, "Ok clicked").show()
+
+                        custom_dg.dismiss();
 
                     }
                     Glide
@@ -130,6 +134,8 @@ class MainActivity : AppCompatActivity() {
                 }
             })
             .show()
+
+
     }
 
     fun addNum()

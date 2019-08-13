@@ -76,9 +76,11 @@ public class shoppingAdapter extends RecyclerView.Adapter<shoppingAdapter.MovieV
         public void bind(MovieOb movie) {
             String url = movie.getPosterPath();
 
+            String rating = String.valueOf(movie.getRating());
+            String cant = String.valueOf(movie.getCant());
             movie_name.setText(movie.getTitle());
-            product_rank.setText((int) movie.getRating());
-            movie_quantity.setText(movie.getCant());
+            product_rank.setText(rating);
+            movie_quantity.setText(cant);
 
             Glide
                     .with(contextm)

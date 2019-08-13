@@ -43,6 +43,7 @@ class MovieOb() : Parcelable {
         cant = parcel.readInt()
     }
 
+
     fun getId(): Int {
         return id
     }
@@ -105,6 +106,7 @@ class MovieOb() : Parcelable {
         parcel.writeString(posterPath)
         parcel.writeString(releaseDate)
         parcel.writeFloat(rating)
+        parcel.writeInt(cant)
     }
 
     override fun describeContents(): Int {
@@ -120,5 +122,6 @@ class MovieOb() : Parcelable {
             return arrayOfNulls(size)
         }
     }
+
 
 }
