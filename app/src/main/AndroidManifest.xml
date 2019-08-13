@@ -13,12 +13,12 @@
             android:theme="@style/AppTheme">
 
         <activity
-                android:name=".Main2Activity"
+                android:name=".CartActivity"
                 android:label="@string/title_activity_main2"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".MainActivity"
+                android:name=".InitActivity"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
